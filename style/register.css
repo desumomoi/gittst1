@@ -1,0 +1,20 @@
+body {
+    background: linear-gradient(90deg, rgb(104, 145, 162), rgb(12, 97, 33)) no-repeat;
+  }
+
+.row form#reg .input-group > .form-control{
+  width: 100%;
+}
+  
+span.error-tips,span.error-tips::before{
+font-family: "Font Awesome 5 FREE";
+color: red;
+font-weight: 900;
+content: "\f0c4";
+}
+span.valid-tips,span.valid-tips::before{
+font-family: "Font Awesome 5 FREE";
+color: greenyellow;
+font-weight: 900;
+content: "\f00c";
+}

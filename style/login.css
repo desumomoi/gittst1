@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(90deg, rgb(104, 145, 162), rgb(12, 97, 33)) no-repeat;
+}
+
+#logincontainer {
+  min-height: 100vh;
+}
+
+/* card componet */
+.mycard.mycard-container {
+  max-width: 400px;
+}
+
+.mycard {
+  background: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 50px auto 25px;
+  border-radius: 10px;
+}
+
+#login-t .profile-name-card {
+  font-size: 1.2rem;
+}
+#login-t .form-signin input[type=email],
+#login-t .form-signin input[type=password],
+#login-t .form-signin button {
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 20px;
+}
+#login-t .btn.btn-signin {
+  font-weight: 700;
+  background: rgb(104, 145, 162);
+  color: #fff;
+  height: 40px;
+  transition: background 1s;
+}
+#login-t .btn.btn-signin:hover, #login-t .btn.btn-signin:active, #login-t .btn.btn-signin:focus {
+  background: rgb(12, 97, 33);
+}
+#login-t .other a {
+  color: rgb(104, 145, 162);
+  transition: 0.3s;
+}
+#login-t .other a:hover, #login-t .other a:active, #login-t .other a:focus {
+  color: rgb(12, 97, 33);
+}
+
+#login-m p {
+  font-size: 1.2rem;
+}
+#login-m .btn.btn-new {
+  font-weight: 700;
+  color: #f7f7f7;
+  height: 40px;
+  width: 100%;
+  background: rgba(12, 97, 33, 0.8);
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+}
+#login-m .btn.btn-new span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(50px);
+  transition: transform 0.5s;
+}
+#login-m .btn.btn-new .spancreate {
+  transition: 0.5s;
+  opacity: 1;
+}
+#login-m .btn.btn-new:hover, #login-m .btn.btn-new:active, #login-m .btn.btn-new:focus {
+  background: rgb(12, 97, 33);
+}
+#login-m .btn.btn-new:hover span i, #login-m .btn.btn-new:active span i, #login-m .btn.btn-new:focus span i {
+  display: block;
+  transform: translate(-50%, -50%) translateY(0px);
+}
+#login-m .btn.btn-new:hover .spancreate, #login-m .btn.btn-new:active .spancreate, #login-m .btn.btn-new:focus .spancreate {
+  opacity: 0;
+}
+
+#login-b p {
+  font-size: 1.1rem;
+}
+#login-b .btn.btn-sns {
+  height: 70px;
+  width: 70px;
+  background: #f7f7f7;
+  border: 1px solid rgba(12, 97, 33, 0.5);
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.5s;
+}
+#login-b .btn.btn-sns i {
+  transition: 0.2s;
+}
+#login-b .btn.btn-sns:hover {
+  background: rgba(12, 97, 33, 0.5);
+  color: #f7f7f7;
+  transform: rotate(360deg);
+}
+#login-b .btn.btn-sns:active i {
+  transform: scale(1.2);
+}
+
+.login-hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgb(12, 97, 33), transparent);
+  margin: 30px 0;
+}/*# sourceMappingURL=login.css.map */

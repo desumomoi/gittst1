@@ -1,0 +1,607 @@
+// 導入bootstrap內建scss 
+@import '../bootstrap-5.2.3/scss/bootstrap';
+
+//背景色
+body {
+    padding: 0;
+    margin: 0;
+    // background: $cyan-100 ;
+    // background: $gray-100 ;
+}
+
+#scontent {
+    background: $cyan-300;
+    background: $gray-300;
+    color: $gray-800;
+    a{
+        color: $gray-800;
+    }
+}
+
+#footer {
+    // background: $cyan-700;
+    // color:#fff;
+    background: $gray-500;
+}
+
+//全域
+i {
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//header
+#header {
+    .navbar {
+        background: #fff;
+        transition: box-shadow 0.3s ease-in-out;
+
+        .img_cos-contain {
+            width: 25vw;
+            max-width: 300px;
+            object-fit: contain;
+        }
+
+        .navbar-collapse {
+            order: 3;
+            width: 36%;
+
+            >.navbar-nav {
+                justify-content: space-evenly;
+                align-items: stretch;
+                align-content: stretch;
+                width: 100%;
+
+                li {
+                    width: 100%;
+                }
+                .dropdown-toggle{
+                    text-align: center;
+                }
+            }
+        }
+
+        .navbar_cos-nonecollapse {
+            order: 4;
+            flex: 2;
+
+
+            #search-group {
+                width: 100%;
+                max-width: 300px;
+                z-index: 10;
+
+                #search_name {
+                    transition: 0.5s;
+                }
+
+                #button-addon2 {
+                    transition: 0.5s;
+                }
+            }
+
+
+            // #search-group {
+            //     width: 100%;
+            //     max-width: 300px;
+            //     transition: opacity 0.5s, width 1s;
+            //     z-index: 10;
+            // }
+
+            .navbar_cos-stayrow {
+                flex-direction: row;
+                justify-content: center;
+                justify-content: space-evenly;
+                width: 100%;
+
+            }
+
+            #nav-searchicon {
+                display: none;
+            }
+        }
+
+        .nav-search {
+            // flex: 3 8;
+            position: relative;
+            height: 42PX;
+
+            form {
+                position: absolute;
+                top: 3px;
+                right: 0;
+            }
+
+            ul {
+                margin-left: auto;
+                margin-right: 13px;
+                margin-top: 2px;
+            }
+        }
+
+        .navbar-toggler {
+            order: 5;
+        }
+
+        li.nav-item.dropdown {
+            cursor: pointer;
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+        }
+
+        .dropdown-menu-end {
+            position: absolute;
+            top: 130%;
+            z-index: 100;
+            box-shadow: 0px 2px 3px $gray-700;
+        }
+
+        .dropdown-menu {
+            opacity: 0;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: 0.3s;
+        }
+
+        #membercentericon img {
+            margin-left: 10px;
+        }
+
+        // .dropdown {
+        //     &:hover {
+
+        //         >.dropdown-menu {
+        //             visibility: visible;
+        //             opacity: 1;
+        //             // transform-origin: top;
+        //             transform: scaleY(1);
+        //             transition: opacity 0.3s, transform 0.5s;
+        //         }
+        //     }
+
+        //     .dropdown-menu {
+        //         visibility: hidden;
+        //         opacity: 0;
+        //         transform-origin: top;
+        //         transform: scaleY(0);
+        //         transition: 0.3s;
+        //     }
+
+        //     .dropdown-menu-end {
+        //         position: absolute;
+        //         top: 130%;
+        //         z-index: 100;
+        //         box-shadow: 0px 2px 3px $gray-700;
+        //     }
+        // }
+    }
+}
+
+.navbar-boxshadow {
+    //利用js控制捲動時加上boxshadow
+    box-shadow: 3px 3px 5px 1px $gray-600;
+}
+
+// 
+#content {
+    min-height: 80vh;
+    #books_new,
+    #books_bestseller {
+        background: $cyan-100;
+        // border: 1px solid $primary-200;
+        border-radius: 10px;
+    }
+
+    .card-in-productlist,
+    .card-index {
+        .btn i {
+            display: none;
+        }
+
+        img {
+            margin: 10px 0px;
+            max-width: 100%;
+            object-fit: cover;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        h5.card-title,
+        p.card-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: default;
+        }
+    }
+
+    .card-index {
+        border: none;
+    }
+
+    .card-in-productlist img {
+        //productlist頁圖片高度
+        height: 30vw;
+    }
+
+    .card-index img {
+        //首頁圖片高度
+        height: 30vw;
+    }
+
+    .card-in-goods {
+        margin: 0 -10px;
+
+        a img {
+            max-height: 360px;
+        }
+    }
+}
+
+.hrindex {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, $cyan-100, $cyan-500, $cyan-100);
+}
+
+
+// breadcrumb
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    list-style: none;
+    background: #e9ecef;
+    border-radius: 0.25rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.col-md-10 {
+    nav {
+        margin: 0 -10px;
+    }
+}
+
+//goods
+.card-in-goods {
+    .row {
+        img {
+            max-height: 650px;
+        }
+
+        .card-body {
+            .input-group {
+                width: 200px;
+
+                // 隱藏input:number的小按鈕
+                input[type="number"]::-webkit-outer-spin-button,
+                input[type="number"]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                    appearance: textfield;
+                }
+            }
+
+            .card-title,
+            .card-text {
+                cursor: default;
+            }
+        }
+    }
+
+}
+
+//cart
+.color_red {
+    color: red;
+}
+
+.table-responsive-md table td {
+    cursor: default;
+    text-align: center;
+}
+
+.table-responsive-md table tfoot td {
+    text-align: center;
+}
+
+.table-responsive-md table tbody tr:hover {
+    background: rgba(152, 214, 245, 0.3);
+}
+
+td a {
+    color: black;
+}
+
+
+/* 輸入有錯誤時，顯示紅框 */
+table input:invalid {
+    border: 3px solid red;
+}
+
+table {
+    tbody {
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .input-group {
+        width: 100px;
+
+        // 隱藏input:number的小按鈕
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+            cursor: default;
+        }
+
+        button {
+            width: 25%;
+        }
+    }
+
+    input:invalid {
+        border: 3px solid red;
+    }
+}
+
+
+//scontent&footer
+#scontent {
+    #aboutme {
+        padding: 30px 0;
+    }
+}
+
+#footer {
+    min-height: 100px;
+    padding-top: 10px;
+    .footericon{
+        list-style: none;
+    }
+}
+
+//sidebar
+.accordion#accordionBooksidebar {
+    height: 100%;
+    margin-left: -10px;
+    background: #FFF;
+
+    .accordion-header button {
+        padding-left: 1rem;
+    }
+
+    .accordion-body {
+        padding: 0;
+    }
+
+    .table {
+        margin-bottom: 0;
+
+        td {
+            border-top: none;
+            border-bottom: 1px solid #dee2e6;
+            padding-left: 1.4rem;
+            overflow: hidden;
+
+            &:hover {
+                background: antiquewhite;
+            }
+        }
+
+        a {
+            color: $info;
+            text-decoration: none;
+            display: block;
+            margin: -10em;
+            padding: 10em;
+
+            i {
+                color: black;
+            }
+        }
+    }
+}
+
+//media
+//.card-index控制視窗768~899(in col-md)&小於520(in col)時變更為圖示
+@media screen and (min-width:768px) and (max-width:899px),
+(max-width:520px) {
+    #content .card-index .btn {
+        .textinbtn {
+            display: none;
+        }
+
+        i {
+            display: inline-block;
+            padding: 0 0.5vw;
+        }
+    }
+}
+
+//.card-in-productlist控制視窗768~1142(in col-md)&小於501(in col)時變更為圖示
+@media screen and (min-width:768px) and (max-width:1142px),
+(max-width:501px) {
+    #content .card-in-productlist .btn {
+        .textinbtn {
+            display: none;
+        }
+
+        i {
+            display: inline-block;
+            padding: 0 0.5vw;
+        }
+    }
+}
+
+
+//控制視窗小於767(in col排列斷點)圖片尺寸拉大
+@media screen and (max-width:767px) {
+
+    #content {
+        .card-in-productlist img {
+            height: 65vw;
+        }
+
+        .card-index img {
+            height: 55vw;
+        }
+
+        .card-in-goods a img {
+            max-height: 650px;
+            max-width: 100%;
+        }
+
+    }
+
+    .accordion#accordionBooksidebar {
+        display: none;
+    }
+}
+
+//控制search
+@media screen and (max-width:767px) {
+    #header .navbar .img_cos-contain {
+        width: 35vw;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    #header .navbar .navbar_cos-nonecollapse .navbar_cos-stayrow {
+        width: 30vw;
+    }
+
+    #header .navbar .navbar_cos-nonecollapse {
+        #search-group {
+            // visibility :hidden;
+            // opacity: 0;
+            // transform: scaleX(0);
+            // transform-origin: right;
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            #search_name {
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+
+            #button-addon2 {
+                // opacity: 0;
+                display: none;
+            }
+
+        }
+
+        #nav-searchicon {
+            display: block;
+        }
+    }
+
+    // #header .navbar .navbar_cos-nonecollapse {
+    //     #search-group {
+    //         width: 0;
+    //         opacity: 0;
+    //         visibility :hidden;
+
+    //     }
+    //     #nav-searchicon {
+    //         display: block;
+    //     }
+    // }
+    // #header .navbar .navbar_cos-nonecollapse {
+    //     #search-group {
+    //         width: 0;
+    //         opacity: 0;
+    //         visibility :hidden;
+
+    //     }
+    //     #nav-searchicon {
+    //         display: block;
+    //     }
+    // }
+}
+
+
+
+//控制navbar-collapse
+@media screen and (min-width:768px) and (max-width:991px) {
+    .navbar-collapse .navbar-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding-top: 20px;
+
+        .dropdown {
+            width: 100%;
+            background-color: blue;
+            border:1px solid #000;
+            // text-align: center;
+        }
+    }
+
+    .navbar .dropdown-menu {
+        position: absolute;
+        float: none;
+        top: 100%;
+        z-index: 100;
+        box-shadow: 0px 2px 3px $gray-700;
+        width: 100%;
+    }
+}
+
+
+
+
+//控制siderbar
+@media screen and (max-width:875px) {
+    .accordion#accordionBooksidebar {
+        .accordion-header button {
+            padding-left: 0.4rem;
+        }
+
+        .table {
+            td {
+                padding-left: 0.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:857px) {
+    .accordion#accordionBooksidebar {
+        .accordion-header button {
+            padding-right: 0.4rem;
+        }
+
+        .table {
+            td {
+                font-size: 1.7vw;
+            }
+        }
+    }
+}

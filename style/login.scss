@@ -1,0 +1,195 @@
+$colorlogin1: rgb(104, 145, 162);
+$colorlogin2: rgb(12, 97, 33);
+$colorlogin2-3: rgba(12, 97, 33, 0.3);
+$colorlogin2-5: rgba(12, 97, 33, 0.5);
+$colorlogin2-8: rgba(12, 97, 33, 0.8);
+$heightbtn1: 40px;
+$heightbtn2: 40px;
+$heightbtn3: 70px;
+
+// 
+body {
+    background: linear-gradient(90deg, $colorlogin1, $colorlogin2) no-repeat;
+}
+
+#logincontainer {
+    min-height: 100vh;
+    // padding: 0 100px;
+}
+
+/* card componet */
+.mycard.mycard-container {
+    // width: 60%;
+    max-width: 400px;
+    // height: 450px;
+    // padding: 0 10px;
+}
+
+.mycard {
+    background: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 50px auto 25px;
+    border-radius: 10px;
+}
+
+// 
+#login-t {
+
+    // #inputPassword::before {
+    //     font-family: "Font Awesome 5 FREE";
+    //     content: "\f023";
+    // }
+    // .profile-img-card {
+    //     margin: 0 auto 10px auto;
+    //     width: 100px;
+    // }
+    .profile-name-card {
+        font-size: 1.2rem;
+    }
+
+    .form-signin input[type="email"],
+    .form-signin input[type="password"],
+    .form-signin button {
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .btn.btn-signin {
+        font-weight: 700;
+        background: $colorlogin1;
+        color: #fff;
+        height: $heightbtn1;
+        transition: background 1s;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $colorlogin2;
+        }
+    }
+
+    .other a {
+        color: $colorlogin1;
+        transition: 0.3s;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $colorlogin2;
+        }
+    }
+}
+
+#login-m {
+    p {
+        font-size: 1.2rem;
+    }
+
+    .btn.btn-new {
+        font-weight: 700;
+        color: #f7f7f7;
+        height: $heightbtn2;
+        width: 100%;
+        background: $colorlogin2-8;
+        transition: 0.5s;
+        overflow: hidden;
+        position: relative;
+
+        span i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(50px);
+            transition: transform 0.5s;
+        }
+
+        .spancreate {
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $colorlogin2;
+
+            span {
+                i {
+                    display: block;
+                    transform: translate(-50%, -50%) translateY(0px);
+                }
+            }
+
+            .spancreate {
+                opacity: 0;
+            }
+        }
+    }
+
+}
+
+#login-b {
+    p {
+        font-size: 1.1rem;
+    }
+
+    .btn.btn-sns {
+        height: $heightbtn3;
+        width: $heightbtn3;
+        background: #f7f7f7;
+        border: 1px solid $colorlogin2-5;
+        border-radius: 50%;
+        transition: background 0.3s, transform 0.5s;
+
+        i {
+            transition: 0.2s;
+        }
+
+        &:hover {
+            background: $colorlogin2-5;
+            color: #f7f7f7;
+            transform: rotate(360deg);
+        }
+
+        &:active {
+            i {
+                transform: scale(1.2);
+            }
+        }
+
+        // &:hover,
+        // &:active,
+        // &:focus {
+        //     background: $colorlogin2-5;
+        //     color: #f7f7f7;
+        // }
+    }
+}
+
+
+.login-hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $colorlogin2, transparent);
+    margin: 30px 0;
+
+}
+
+//
+// #login-m {
+//     button {
+//         overflow: hidden;
+//         transition: 0.5s;
+//         span i{
+//                 transform: translateY(50px);
+//             }
+//         &:hover,&:active,&:focus {
+//            span i{
+//             transform: translateY(0px);
+//            }
+//         }
+//     }
+// }

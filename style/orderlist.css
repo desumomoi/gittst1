@@ -1,0 +1,52 @@
+#content {
+    min-height: 80vh;
+}
+#accordionOrderlist table td {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#accordionOrderlist .statusEach {
+  white-space: nowrap;
+}
+
+#accordionOrderlist thead td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.orderTableB h4{
+  font-size: 1rem;
+}
+
+
+.thtd1{
+  min-width :10% ;
+}
+.thtd2{
+  min-width :20% ;
+}
+.thtd3{
+  min-width :15% ;
+}
+.thtd4{
+  min-width :15% ;
+}
+.thtd5{
+  min-width :10% ;
+}
+.thtd6{
+  min-width :20% ;
+}
+.thtd7{
+  min-width :10% ;
+}
+
+
+@media screen and (max-width:767px) {
+  #accordionOrderlist .tbtd5,.tbtd6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
